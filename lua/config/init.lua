@@ -1,6 +1,4 @@
 require("config.packages")
 require("config.nvim_settings")
 require("config.remap")
-require("config.telescope")
-require("config.treesitter")
 require("config.LSP")

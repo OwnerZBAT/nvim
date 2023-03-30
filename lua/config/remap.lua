@@ -1,7 +1,9 @@
-
 -- [[ Basic Keymaps ]]
 -- Create a new tab
-vim.keymap.set("n", "<leader>n", ":tabnew <bar> :Ex<Enter>", { desc="Open [n]ew Tab" })
+vim.keymap.set("n", "<leader>n", function()
+  vim.cmd.tabnew()
+  vim.cmd.Ex()
+end , { desc="Open [n]ew Tab" })
 -- Switch between tabs shortcut
 vim.keymap.set("n", "<C-m>", vim.cmd.tabn, { desc="Goto the next tab"})
 vim.keymap.set("n", "<C-n>", vim.cmd.tabN, { desc="Goto the previous tab"})
